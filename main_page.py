@@ -6,8 +6,7 @@ st.sidebar.markdown("# Main page 🎈")
 hide_streamlit_style = """
 <style>
 #MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
-footer {visibility: hidden;}
+footer {display: none;}
 </style>
 
 """
