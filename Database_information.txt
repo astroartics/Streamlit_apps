@@ -1,0 +1,5 @@
+Server [localhost]: localhost
+Database [postgres]: postgres
+Port [5432]: 5432
+Username [postgres]: postgres
+Password for user postgres:psql
