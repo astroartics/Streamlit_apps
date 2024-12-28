@@ -12,6 +12,7 @@ footer {visibility: hidden;}
 .e3i9eg82 {visibility: hidden;}
 ._container_gzau3_1 {visibility: hidden;}
 ._viewerBadge_nim44_23 {visibility: hidden;}
+._link_gzau3_10 {visibility: hidden;}
 </style>
 
 """
