@@ -30,7 +30,7 @@ st.scatter_chart(st.session_state.df2,x="x",y="y",color=color)
 
 # Database connectivity
 from sqlalchemy.sql import text
-conn = st.connection('postgresql',type="sql")
+conn = st.connection('postgres',type="sql")
 db_table_data = conn.query("Select *from test;")
 db_table_data
 
