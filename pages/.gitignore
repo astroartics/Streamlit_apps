@@ -1,1 +1,2 @@
-.streamlit/secrets.toml
+pages/.streamlit/secrets.toml
+Applications/.streamlit/secrets.toml
