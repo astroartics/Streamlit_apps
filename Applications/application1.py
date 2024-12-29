@@ -31,5 +31,3 @@ for i in range(101):
     progress_bar.empty()
 
 data_load_state = st.text('Loading data...done!') 
-
-#OPENAI_API_KEY = "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"
