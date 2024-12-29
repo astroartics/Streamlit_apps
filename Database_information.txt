@@ -1,8 +1,0 @@
-Server [localhost]: localhost
-Database [postgres]: postgres
-Port [5432]: 5432
-Username [postgres]: postgres
-Password for user postgres:psql
-
-
-#OPENAI_API_KEY = "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"

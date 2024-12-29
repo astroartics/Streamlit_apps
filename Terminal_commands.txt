@@ -1,6 +1,0 @@
-Open in integrated terminal : 
-conda activate streamlitenv
-streamlit run filename.py
-deactivate
-
-Clearing SQL Shell Screen : \! cls
