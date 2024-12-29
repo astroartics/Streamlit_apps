@@ -2,6 +2,7 @@ import streamlit as st
 from PIL import Image
 import time
 import numpy as np
+import random
 
 # avatar_img = Image.open('sanjana_vector.png')
 # st.chat_message("user",avatar = avatar_img).text("input")
@@ -32,13 +33,32 @@ if "responses" not in st.session_state :     # Initializing the response history
 
 avatar_img = Image.open('sanjana_vector.png')
 for message,response in zip(st.session_state.messages,st.session_state.responses) : 
-    st.chat_message(message['role'], avatar=avatar_img).text(message['content'])
-    st.chat_message(response['role']).text(response['content'])
+    st.chat_message("user",avatar = avatar_img).text(message['content'])
+    st.chat_message("ai").text(response['content'])
 
-response = np.random.randn(1)
+
+
+def response_generator() :
+    response = random.choice(
+        [
+            "Hello there human!",
+            "Yo, I'm a robot...",
+            "Hey there, how are you?",
+            "Hello! How can I help you today?"
+        ]
+    )
+    for letter in response :
+        yield letter + ""   # Returns one letter at a time
+        time.sleep(0.05)
+
+
 
 if prompt := st.chat_input("What is up?") :
     st.chat_message("user",avatar = avatar_img).text(prompt)
-    st.session_state.messages.append({'role' : 'user', 'content' : prompt})
-    st.chat_message("ai").text(response)   
-    st.session_state.responses.append({'role' : 'ai', 'content' : response})
+    st.session_state.messages.append({'content' : prompt})
+
+    # response = np.random.randn(1)
+    with st.chat_message("assistant"):
+        response = st.write_stream(response_generator())    # Writing one letter at a time, in the chat_message section of Assistant
+
+    st.session_state.responses.append({'content' : response})
